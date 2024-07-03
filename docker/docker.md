@@ -1,0 +1,30 @@
+# Basics of Docker and Docker Compose
+
+- Docker: a way to package software that it can run on any hardware
+    - Dockerfile: a blueprint for building a Docker image
+    - Docker Image: a template for running Docker containers
+    - Docker Container: a running process
+- `docker ps` gives you a list of all the running containers on your system
+- Dockerfile Basics:
+    - `FROM` takes and some base image (like Ubuntu or Node)
+    - `WORKDIR` takes the app's source code directory
+    - `COPY` takes 2 arguments: an item to copy (like a `package.json`) and a place to copy it to (like the current working directory `./`)
+    - `RUN` takes a shell command (like `npm install`) to install and cache dependencies before actually running the app
+        - Since the Dockerfile will copy the dependencies and install them, you'll want to ignore the local node modules (and perhaps other things) from your local app's source code -- for this, use the `.dockerignore` file
+    - `ENV` takes an environment (like PORT=8080) to actually run code on
+    - `EXPOSE` takes that same port to actually expose the running service within the Docker container
+        - The port above will need to be forwarded to a port on the actual server/machine running the Docker Container
+    - `CMD` takes an array of string commands (like `["npm", "start"]`)
+- To build a Docker Image given a project with a Dockerfile, run `docker build -t <tagNameForImage> <path/to/working/directory>`
+    - If you have the working directory checked out, you can simply supply `.` as the path
+    - Pro Tip: Set up a username on Docker Hub and use tags like: `<username>/<appName>:1.0` where 1.0 is the version number
+- You can use the generated Image as a base Image for other Dockerfiles or as a template for running a Container
+- To run a Docker Image in a Container, use `docker run -p <localPort>:<exposedPortInDockerfile>` followed by the Image ID or the tag name (the Image ID will be in the output of a successful `docker build` execution)
+- Volumes are used to persist information from running Docker Containers on a host machine
+    - `docker volume create <myVolumeName>`
+- To mount a volume for a running Container: `docker run --mount source=<myVolumeName>,target=<containerDirectory>`
+- Docker Compose is a tool for running multiple Docker Containers at the same time
+    - Each Container should only run one process, so if you need to run multiple processes, you should use multiple Containers
+    - `docker-compose.yml` where services object consists of keys where each key represents a different Container that should be run
+- `docker-compose up` will use the `docker-compose.yml` file to spin up and run all the Docker Containers
+- `docker-compose down` will shut down all the Containers
