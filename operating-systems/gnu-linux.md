@@ -1,4 +1,5 @@
 # Basics
+
 - Different linux distros use different kernel versions
 - Different kernel versions have different levels of support for hardware
 - New hardware requires drivers to be written for them to connect the hardware with the kernel
