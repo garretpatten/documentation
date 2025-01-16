@@ -1,3 +1,5 @@
+# Linux Fundamentals
+
 - The name "Linux" is actually an umbrella term for multiple OS's that are based on UNIX (another operating system)
     - Because UNIX is open-source, variants of Linux come in all shapes and sizes - suited best for what the system is being used for
 - The first linux release was in 1991
