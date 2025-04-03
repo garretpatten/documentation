@@ -1,6 +1,7 @@
 # Dual-Boot a Macbook
 
 ## Directions
+
 - Partition hard drive
     - 100 gb for new OS
     - 16 gb for SWAP (this amount should match RAM)
@@ -20,4 +21,5 @@
 - Reboot
 
 ## Video Walkthrough
+
 - [How to dual boot Linux and macOS on a Mac](https://www.youtube.com/watch?v=GcdhJfe3aP8)

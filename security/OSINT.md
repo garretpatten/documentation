@@ -16,11 +16,11 @@
 ## Content Discovery Tools
 
 - `./sublist3r.py -d <URL>`
-    - https://github.com/aboul3la/Sublist3r
+    - <https://github.com/aboul3la/Sublist3r>
 - `curl -v <URL>` will callout to the IP in verbose mode revealing response headers
 - `dirb <URL> <pathToWordlist>`
 - `dnsrecon -t brt -d <URL>`
-- `ffuf -w <pathToWordlist> -X <REQUEST_METHOD> -d <ARGUMENTS_TO_SEND_FUZZ_VAR> -u <URL>
+- `ffuf -w <pathToWordlist> -X <REQUEST_METHOD> -d <ARGUMENTS_TO_SEND_FUZZ_VAR> -u <URL>`
     - `mr <PAGE_CONTENT_TO_VERIFY_RESULT>`
     - `fc <STATUS_CODE_TO_VERIFY_RESULTS>`
     - `w` flag can point to multiple things: `w pathToUsernames.txt:W1,pathToPasswords.txt:W2` which you can then plug into the `d` flag like "username=W1&password=W2"
@@ -81,7 +81,7 @@ filetype
     - Windows
         - `whoami` (see what user the application is running under)
         - `dir` (list contents of current directory)
-        - `ping` (can cause the application to hang
+        - `ping` (can cause the application to hang)
         - `timeout` (for when ping is not installed)
 - `view-source:<website>` will render the source code in the browser window instead of the webpage
 - SSRF giveaways:

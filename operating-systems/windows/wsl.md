@@ -4,7 +4,7 @@
 
 ### WSL Installation
 
-- Install Guide: https://learn.microsoft.com/en-us/windows/wsl/install
+- Install Guide: <https://learn.microsoft.com/en-us/windows/wsl/install>
 - `wsl --install`
 - Restart
 
@@ -17,7 +17,7 @@
     - password
     - password confirm
 - `wsl --setdefault kali-linux`
-- Kali Setup Guide: https://www.kali.org/docs/general-use/metapackages/
+- Kali Setup Guide: <https://www.kali.org/docs/general-use/metapackages/>
 - `wsl sudo apt update`
 - `wsl sudo apt full-upgrade -y`
 - `wsl sudo apt install -y kali-linux-defaults`
@@ -48,7 +48,7 @@ Windows Subsystem for Linux runs on a Linux filesystem mounted at `/mnt`. This m
 - The performance of Ubuntu Linux run using the Windows Subsystem for Linux 2 ([WSL2](https://www.techradar.com/news/running-linux-on-windows-10-just-got-a-little-less-janky)) under the [Windows 11](https://www.techradar.com/news/windows-11-home-and-pro) release was a close match to the performance of the distro run on bare metal
     - *Phoronix* tried to gauge the improvements of the WSL2 subsystems of the upcoming Windows release, by pitting it against native [Ubuntu 20.04](https://www.techradar.com/reviews/ubuntu-2004-lts-focal-fossa) and the Ubuntu 21.10 installations
     - “Out of 130 tests in total, Windows 11 WSL2 Ubuntu 20.04 LTS managed to run at 94% the speed of bare metal Ubuntu 20.04 LTS on the same system,” observes *Phoronix*.
-- Source: https://www.techradar.com/news/windows-11-wsl-2-is-almost-as-quick-as-running-linux-natively
+- Source: <https://www.techradar.com/news/windows-11-wsl-2-is-almost-as-quick-as-running-linux-natively>
 
 ## Windows/WSL System Guide
 

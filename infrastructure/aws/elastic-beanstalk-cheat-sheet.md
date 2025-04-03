@@ -1,3 +1,5 @@
+# Elastic Beanstalk Cheat Sheet
+
 - **Elastic Beanstalk** handles the deployment, from capacity provisioning, load balancing, auto-scaling to application health monitoring.
 - When you want to run a web application but you don't want to have to think about the underlying infrastructure
 - It costs nothing to use Elastic Beanstalk (only the resources it provisions, e.g. RDS, ELB, EC2)

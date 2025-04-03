@@ -22,4 +22,5 @@
 - TODO
 
 ## Video Walkthrough
+
 - [Arch Linux Installation Guide 2024: An Easy to Follow Tutorial](https://www.youtube.com/watch?v=FxeriGuJKTM&t=753s)

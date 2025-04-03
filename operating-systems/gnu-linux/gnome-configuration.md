@@ -1,12 +1,14 @@
-# Pre-Requisites
+# Gnome Configuration
 
-*Reddit guide:* https://www.reddit.com/r/IntelligentGaming2020/comments/zdbdfu/how_to_install_use_gnome_extensions_in_fedora/
+## Pre-Requisites
 
-*Accompanying YouTube video: https://www.youtube.com/watch?v=3EG-16c4gMs&ab_channel=IntelligentGaming*
+*Reddit guide:* <https://www.reddit.com/r/IntelligentGaming2020/comments/zdbdfu/how_to_install_use_gnome_extensions_in_fedora/>
 
-## Step by Step
+*Accompanying YouTube video: <https://www.youtube.com/watch?v=3EG-16c4gMs&ab_channel=IntelligentGaming>*
 
-- Install Gnome Shell Integration browser extension: https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep
+### Step by Step
+
+- Install Gnome Shell Integration browser extension: <https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep>
 - Install:
     - (`apt`): `chrome-gnome-shell`
     - (`dnf`): `chrome-gnome-shell`
@@ -14,15 +16,15 @@
 
 - Install `gnome-tweaks` if not already installed
 
-# GDM Settings
+## GDM Settings
 
 *Source: https://aur.archlinux.org/packages/gdm-settings*
 
-# Gnome Extensions
+## Gnome Extensions
 
 *Can be downloaded from:* https://extensions.gnome.org/ once pre-requisite steps are completed
 
-## User Extensions
+### User Extensions
 
 - Custom Accent Colors
 - Extension List
@@ -33,18 +35,18 @@
     - Skeuos-Blue-Dark-FullPanel-GNOME_40+41
 - Vitals
 
-## System Extensions
+### System Extensions
 
 - AppIndicator and KStatusNotifierItem Support
 - Blur my Shell
 
-# Gnome Tweaks
+## Gnome Tweaks
 
-## Appearance
+### Appearance
 
 - Icons: Tela-dark
 
-## Windows
+### Windows
 
 - Titlebar Buttons
     - Maximize: enabled
@@ -55,6 +57,6 @@
     - Center New Windows: enabled
     - Window Action Key: Super
 
-## Startup Applications
+### Startup Applications
 
 - 1Password

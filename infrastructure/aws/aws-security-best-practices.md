@@ -1,3 +1,5 @@
+# AWS Security Best Practices
+
 ## Guidance
 
 - Great follow up courses to this one
@@ -8,7 +10,7 @@
 
 - Instructor: Jacques Pace
 - Labs will take place in AWS Builder Labs
-- Course Materials: https://online.vitalsource.com/reader/books/200-SISCBP-15-EN-SG-E/pageid/0
+- Course Materials: <https://online.vitalsource.com/reader/books/200-SISCBP-15-EN-SG-E/pageid/0>
     - Will be accessible for a year (until 12/15/24)
 
 ## Module 1: Security Overview
@@ -155,9 +157,9 @@
         - Use info from headers
         - Generally fast and has no issue with heavy traffic loads
         - NACLs
-    
-    ## Stateful
-    
+
+## Stateful
+
 - Rules in NACL apply in order
     - If Deny Any Any first and then Allow HTTPS Any, all traffic will be denied
     - If order is reversed, HTTPS will be allowed in, but other protocols like HTTP will not

@@ -1,4 +1,6 @@
-# Appointment
+# Tier 1 Machines
+
+## Appointment
 
 - SQL - Structured Query Language
 - PII - Personally Identifiable Information
@@ -10,19 +12,19 @@
     - Example: `gobuster dir --url <http://10.129.91.77> --wordlist ~/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt`
     - Alternatives to Gobuster: `dirbuster` and `dirb`
 
-# Sequel
+## Sequel
 
 - `sql -h {target_IP} -u {username}` can be used to test passwordless logins on mySql servers
 - `SHOW DATABASES;` and `USE {database};`
 - `SHOW TABLES;` and `SELECT * FROM {table};`
 
-# Crocodile
+## Crocodile
 
 - `nmap -sC` employs the use of default scripts during a scan
 - FTP Code 230 is returned to signify Anonymous FTP login allowed"
 - Wappalyzer is a useful browser extension to analyze a web site's technologies
 - `gobuster -x` allows you to specify specific file types to search for on an IP address (`html,php` for example)
 
-# Responder
+## Responder
 
 - TODO

@@ -192,7 +192,7 @@
     - Domain Key and DKIM Signatures: Email signatures provided by email services to identify and authenticate emails
     - SPF: Shows the server that was used to send the email
     - Message-ID: Unique ID of the email
-    - MIME-Version: Used MIME version (which helps to understand the delivered non-text contents/attachments
+    - MIME-Version: Used MIME version (which helps to understand the delivered non-text contents/attachments)
     - X-Headers: The receiver mail providers usually add these fields (provided info is usually experimental and varies by mail provider)
     - X-Received: Mail servers that the email went through
     - X-Spam Status: Spam score of the email
@@ -211,7 +211,7 @@
     - `u`: show URLs
     - `-text`: show cleartext data
     - `-extract-all`: extract all attachments
-- Some OSINT tools to check email repudiation like https://emailrep.io/
+- Some OSINT tools to check email repudiation like <https://emailrep.io/>
 - Other useful OSINT tools:
     - VirusTotal: a service that provides a cloud-based detection toolset and sandbox environment
     - InQuest: a service that provides network and file analysis by using threat analytics
@@ -364,7 +364,7 @@
 - Access control is a security element that determines who can access certain information and resources
     - After authentication, access control enforces the appropriate access level
 - The OWASP Top 10 list aims to raise awareness regarding common security issues that plague web applications
-    - https://owasp.org/Top10/
+    - <https://owasp.org/Top10/>
 - IDOR refers to the situation where a user can manipulate the input to bypass authorization due to poor access control
     - IDOR was the fourth on the OWASP Top 10 list in 2013 before it was published under Broken Access Control in 2017
 
@@ -391,7 +391,7 @@
 ## Day 17
 
 - An effective way to validate input is first to know how a specific piece of data is going to be processed by the rest of your application
-- Data then goes through syntax and semantic validation checks to ensure that the user-provided values are both proper in their syntax (the answer follows the proper context asked by the question) and logical value (the values make sense for the question
+- Data then goes through syntax and semantic validation checks to ensure that the user-provided values are both proper in their syntax (the answer follows the proper context asked by the question) and logical value (the values make sense for the question)
 - HTML5’s built-in features help a lot with the validation of user-provided input, minimizing the need to rely on JavaScript for the same objective
     - The `<input>` element, specifically has an array of very helpful capabilities centered around form validation:
         - It can be set to specifically filter for an email, a URL, or even a file, among others, promptly checks whether or not the user-provided input fits the type of data that the form is asking for, and so, feedback on its validity is immediately returned to the user as a result
@@ -415,7 +415,7 @@
     - Finally, there's the `?` operator, which is used to denote that the preceding token is optional
     - If we want to match both [www.tryhackme.com](http://www.tryhackme.com/) and [tryhackme.com](http://tryhackme.com/), our pattern would be `^(www\\.)?tryhackme\\.com$`
         - This pattern would also avoid matching .tryhackme.com
-        - `^(www\\.)?`: The `^` operator marks the start of the string, followed by the grouping of www and the escaped `.`, and immediately followed by the question mark operator -- the grouping allowed the question mark operator to work its magic, matching both strings with or without the www. at the beginning
+        - `^(www\\.)?`: The `^` operator marks the start of the string, followed by the grouping of www and the escaped `.`, and immediately followed by the question mark operator -- the grouping allowed the question mark operator to work its magic, matching both strings with or without the `www` at the beginning
         - `tryhackme\\.com$`: The `$` operator marks the end of the string, preceded by the string tryhackme, an escaped `.`, and the string com
             - If we don't escape the `.` operator, the regex engine will think that we want to match any character between tryhackme and com as well
 - free text fields are more free-for-all, and so validations checks are more limited, and the challenge of securing it is generally vaguer -- below are some considerations to ponder on:

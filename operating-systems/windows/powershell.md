@@ -1,11 +1,13 @@
-# Basics
+# Powershell
+
+## Basics
 
 - Powershell is the Windows scripting language and shell environment
 - Powershell is built using the .NET framework
 
-## cmdlets
+### cmdlets
 
-### Overview
+#### Overview
 
 - Most Powershell commands are called **cmdlets**
     - The output of cmdlets are objects
@@ -20,14 +22,14 @@
         - New
         - Out
 
-### Get-Help & Get-Command
+#### Get-Help & Get-Command
 
 - `Get-Help` displays information about a cmdlet*.* To get help with a particular command, run the following: `Get-Help Command-Name`
 - Pass the `-examples` flag to commands to understand exactly how to use the command
 - `Get-Command` gets all the cmdlets **installed on the current Computer
     - It allows for pattern matching like the following: `Get-Command Verb-*` or `Get-Command *-Noun`
 
-### Object Manipulation
+#### Object Manipulation
 
 - cmdlets return objects (which contain methods and properties); to manipulate the output, there are 2 options:
     - pass the output to another cmdlet (with the Pipeline `|`)

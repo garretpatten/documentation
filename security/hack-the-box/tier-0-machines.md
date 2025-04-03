@@ -1,4 +1,6 @@
-# Meow
+# Tier 0 Machines
+
+## Meow
 
 - VM - Virtual Machine
 - Terminal - used to interact with the operating system in order to issue commands via the command line, such as the one to start our VPN connection; also known as the console or shell
@@ -7,7 +9,7 @@
 - `ping` - tool used to test connections to targets with an ICMP echo request
 - `nmap` - the name of the most common tool for finding open ports on a target
 
-# Fawn
+## Fawn
 
 - FTP - File Transfer Protocol
 - The FTP service usually listens on port 21
@@ -15,7 +17,7 @@
 - `nmap -sV {target_IP} -Pn` will scan for services and version on ports and override ping probes being blocked
 - anonymous - the username that is used over FTP when you want to log in without having an account
 
-# Dancing
+## Dancing
 
 - SMB - Server Message Block
 - The SMB service usually listens on port 445
@@ -23,7 +25,7 @@
 - `get` - SMB command to download files
 - There is an SMB client on MacOS: Finder > Go > Connect to Server > smb://{target_IP}
 
-# Redeemer
+## Redeemer
 
 - `p-` can be used to scan *all* ports on a target
 - If an `nmap` scan is slow, use `-min-rate 5000` or `T5` to speed it up
