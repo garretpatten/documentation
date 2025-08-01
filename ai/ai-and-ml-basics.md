@@ -1,4 +1,6 @@
-# Vectorization & Embedding
+# Artificial Intelligence & Machine Learning Basics
+
+## Vectorization & Embedding
 
 Imagine you have a library with a vast collection of books. Each book is unique and contains different topics, genres, and writing styles.
 
