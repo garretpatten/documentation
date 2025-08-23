@@ -1,8 +1,6 @@
 # Arch Installation Guide
 
-## Step by Step Instructions
-
-### Pre-Installation: Connect to WiFi
+## Pre-Installation: Connect to WiFi
 
 - Show IP Address Info: `ip addr show`
 - Get available WiFi networks: `iwctl station wlan0 get-networks`
@@ -11,6 +9,8 @@
 - Verify Connection by Checking IP Address: `ip addr show`
 
 *Note: You can first run `iwctl` and then enter commands starting with `station`*
+
+## Installation
 
 ### Easy Install
 
@@ -21,6 +21,8 @@
 
 - TODO
 
-## Video Walkthrough
+## Additional Resources
+
+### Video Walkthrough
 
 - [Arch Linux Installation Guide 2024: An Easy to Follow Tutorial](https://www.youtube.com/watch?v=FxeriGuJKTM&t=753s)
