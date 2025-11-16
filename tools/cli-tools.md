@@ -9,7 +9,7 @@
 
 ### Fun
 
-- `matrix` - https://github.com/Rezmason/matrix
+- `matrix` - <https://github.com/Rezmason/matrix>
 - `movie-cli` - tool to quickly retrieve information about movies
 
 ### Search

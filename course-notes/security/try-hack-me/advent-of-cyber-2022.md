@@ -206,12 +206,15 @@
 - Scanning Tools:
   - `Network Mapper (nmap)` is a popular tool used to carry out port
     scanning, discover network protocols, identify running services,
-    and detect operating systems on live hosts - A **TCP SYN Scan** gets the list of live hosts and associated
-    ports on the hosts without completing the TCP three-way handshake
-    and making the scan a little stealthier: `nmap -sS <ipAddress>` - A **Ping Scan** allows scanning the live hosts in the network
-    without going deeper and checking for ports services etc: `nmap -sn
-<ipAddress>` - An **Operating System Scan** allows scanning of the type of OS
-    running on a live host: `nmap -sV <ipAddress>`
+    and detect operating systems on live hosts
+    - A **TCP SYN Scan** gets the list of live hosts and associated
+      ports on the hosts without completing the TCP three-way handshake
+      and making the scan a little stealthier: `nmap -sS <ipAddress>`
+    - A **Ping Scan** allows scanning the live hosts in the network
+      without going deeper and checking for ports services etc: `nmap -sn
+<ipAddress>`
+    - An **Operating System Scan** allows scanning of the type of OS
+      running on a live host: `nmap -sV <ipAddress>`
   - `Nikto` is open-source software that allows scanning websites for
     vulnerabilities; and, it enables looking for subdomains, outdated
     servers, debug messages etc., on a website: `nikto -host

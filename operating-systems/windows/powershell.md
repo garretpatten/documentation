@@ -13,7 +13,7 @@
   - The output of cmdlets are objects
 - Running cmdlets allows you to perform actions on the output object (which
   makes it convenient to pass output from one cmdlet to another)
-- The normal format of a cmdlet **is represented using **Verb-Noun\*\*; for
+- The normal format of a cmdlet **is represented using Verb-Noun**; for
   example, the cmdlet to list commands is called `Get-Command`
   - Common verbs are:
     - Get

@@ -31,7 +31,8 @@
   receiving a reply, thus determining if the said port is open or not
   - Some ports are used by default by certain services. Others might be
     non-standard, which is why we will be using the service detection flag
-    `sV` to determine the name and description of the identified services \*`sudo nmap -sV {target_IP)`
+    `sV` to determine the name and description of the identified services
+    - `sudo nmap -sV {target_IP)`
 - Following a scan, you can identify ports and what services/protocols they
   are using
   - Some internet research and you can figure out how to initiate a

@@ -18,12 +18,12 @@ _Accompanying YouTube video: <https://www.youtube.com/watch?v=3EG-16c4gMs&ab_cha
 
 ## GDM Settings
 
-_Source: https://aur.archlinux.org/packages/gdm-settings_
+_Source:_ <https://aur.archlinux.org/packages/gdm-settings>
 
 ## Gnome Extensions
 
-_Can be downloaded from:_ https://extensions.gnome.org/ once pre-requisite
-steps are completed
+_Can be downloaded from:_ <https://extensions.gnome.org/> once
+pre-requisite steps are completed
 
 ### User Extensions
 
