@@ -1,10 +1,10 @@
-# Issue Template
+<!-- markdownlint-disable MD041 -->
 
-## Issue Description
+### Issue Description
 
 -
 
-### Link to Document
+### Link to Document (if applicable)
 
 -
 

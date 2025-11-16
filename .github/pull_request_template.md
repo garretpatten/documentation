@@ -1,6 +1,6 @@
-# Pull Request Template
+<!-- markdownlint-disable MD041 -->
 
-## Changes
+### Changes
 
 -
 
