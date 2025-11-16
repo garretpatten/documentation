@@ -27,7 +27,7 @@
 
 ## Redeemer
 
-- `p-` can be used to scan *all* ports on a target
+- `p-` can be used to scan _all_ ports on a target
 - If an `nmap` scan is slow, use `-min-rate 5000` or `T5` to speed it up
 - Redis is an in-memory database
 - Redis usually listens on port 6379

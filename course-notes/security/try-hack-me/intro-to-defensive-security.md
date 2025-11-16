@@ -1,46 +1,46 @@
 # Intro to Defensive Security
 
 - Defensive security is concerned with two main tasks:
-    - Preventing intrusions from occurring
-    - Detecting intrusions when they occur and responding properly
+  - Preventing intrusions from occurring
+  - Detecting intrusions when they occur and responding properly
 - Security Operations Center (SOC) - a team of cyber security professionals that monitors the network and its systems to detect malicious cyber security events
-    - Vulnerabilities
-    - Policy Violations
-    - Unauthorized Activity
-    - Network Intrusions
+  - Vulnerabilities
+  - Policy Violations
+  - Unauthorized Activity
+  - Network Intrusions
 - Threat Intelligence --> Thread Informed Defense
 - Digital Forensics and Incident Response (DFIR)
 - Digital Forensics in Defensive Security:
-    - Intellectual Property Theft
-    - Cyber Espionage
-    - Possession of Unauthorized Content
+  - Intellectual Property Theft
+  - Cyber Espionage
+  - Possession of Unauthorized Content
 - Digital Forensics materials:
-    - File System
-        - Installed Programs
-        - Created Files
-        - Partially Overwritten Files
-        - Deleted Files
-    - System Memory
-    - System Logs
-    - Network Logs
+  - File System
+    - Installed Programs
+    - Created Files
+    - Partially Overwritten Files
+    - Deleted Files
+  - System Memory
+  - System Logs
+  - Network Logs
 - 4 Major Phases of Incident Response
-    - Preparation
-    - Detection and Analysis
-    - Containment, Eradication, and Recover
-    - Post-Incident Activity
+  - Preparation
+  - Detection and Analysis
+  - Containment, Eradication, and Recover
+  - Post-Incident Activity
 - Malware
-    - Virus: a piece of code that attaches itself to a program
-        - It is designed to spread from one computer to another
-        - it works by altering, overwriting, and deleting files once it infects a computer
-    - Trojan Horse: a program that shows one desirable function but hides malicious function underneath
-    - Ransomware: a malicious program that encrypts the user's files
-        - Encryption makes the files unreadable without knowing the encryption password
-        - The attacker offers the user the encryption password if the user is willing to pay the ransom
+  - Virus: a piece of code that attaches itself to a program
+    - It is designed to spread from one computer to another
+    - it works by altering, overwriting, and deleting files once it infects a computer
+  - Trojan Horse: a program that shows one desirable function but hides malicious function underneath
+  - Ransomware: a malicious program that encrypts the user's files
+    - Encryption makes the files unreadable without knowing the encryption password
+    - The attacker offers the user the encryption password if the user is willing to pay the ransom
 - Malware Analysis:
-    - Static analysis of the program without running it
-        - Usually requires knowledge of assembly language
-    - Dynamic analysis of the program running in a controlled environment where it is monitored
+  - Static analysis of the program without running it
+    - Usually requires knowledge of assembly language
+  - Dynamic analysis of the program running in a controlled environment where it is monitored
 - A Security Information and Event Management (SIEM) system gathers security-related information and events from various sources and presents them via one system
 - There are many open-source databases out there where you can perform a reputation and location check for IP Addresses
-    - AbuseIPDB
-    - Cisco Talos Intelligence
+  - AbuseIPDB
+  - Cisco Talos Intelligence

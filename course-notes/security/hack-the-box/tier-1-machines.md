@@ -8,9 +8,9 @@
 - 443 is the default port for HTTPS protocol
 - 404 error code - "Not Found"
 - `gobuster` - a tool used to brute-force URIs (including directories and files as well as DNS subdomains) written in Go
-    - `dir` - Gobuster switch to specify search for directories (instead of subdomains)
-    - Example: `gobuster dir --url <http://10.129.91.77> --wordlist ~/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt`
-    - Alternatives to Gobuster: `dirbuster` and `dirb`
+  - `dir` - Gobuster switch to specify search for directories (instead of subdomains)
+  - Example: `gobuster dir --url <http://10.129.91.77> --wordlist ~/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt`
+  - Alternatives to Gobuster: `dirbuster` and `dirb`
 
 ## Sequel
 

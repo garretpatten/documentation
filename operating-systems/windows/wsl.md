@@ -13,19 +13,19 @@
 #### Kali Install
 
 - `wsl --install -d kali-linux`
-    - username
-    - password
-    - password confirm
+  - username
+  - password
+  - password confirm
 - `wsl --setdefault kali-linux`
 - Kali Setup Guide: <https://www.kali.org/docs/general-use/metapackages/>
 - `wsl sudo apt update`
 - `wsl sudo apt full-upgrade -y`
 - `wsl sudo apt install -y kali-linux-defaults`
-    - A few Enter keypresses to confirm config
+  - A few Enter keypresses to confirm config
 - If desktop environment is desired:
-    - `wsl sudo apt install -y kali-desktop-kde`
-    - `wsl sudo apt install -y kali-desktop-gnome`
-    - `wsl sudo apt install -y kali-desktop-xfce`
+  - `wsl sudo apt install -y kali-desktop-kde`
+  - `wsl sudo apt install -y kali-desktop-gnome`
+  - `wsl sudo apt install -y kali-desktop-xfce`
 
 ### Distro Removal
 
@@ -46,12 +46,12 @@ Windows Subsystem for Linux runs on a Linux filesystem mounted at `/mnt`. This m
 ### WSL vs. Bare Metal Linux (Performance)
 
 - The performance of Ubuntu Linux run using the Windows Subsystem for Linux 2 ([WSL2](https://www.techradar.com/news/running-linux-on-windows-10-just-got-a-little-less-janky)) under the [Windows 11](https://www.techradar.com/news/windows-11-home-and-pro) release was a close match to the performance of the distro run on bare metal
-    - *Phoronix* tried to gauge the improvements of the WSL2 subsystems of the upcoming Windows release, by pitting it against native [Ubuntu 20.04](https://www.techradar.com/reviews/ubuntu-2004-lts-focal-fossa) and the Ubuntu 21.10 installations
-    - “Out of 130 tests in total, Windows 11 WSL2 Ubuntu 20.04 LTS managed to run at 94% the speed of bare metal Ubuntu 20.04 LTS on the same system,” observes *Phoronix*.
+  - *Phoronix* tried to gauge the improvements of the WSL2 subsystems of the upcoming Windows release, by pitting it against native [Ubuntu 20.04](https://www.techradar.com/reviews/ubuntu-2004-lts-focal-fossa) and the Ubuntu 21.10 installations
+  - “Out of 130 tests in total, Windows 11 WSL2 Ubuntu 20.04 LTS managed to run at 94% the speed of bare metal Ubuntu 20.04 LTS on the same system,” observes *Phoronix*.
 - Source: <https://www.techradar.com/news/windows-11-wsl-2-is-almost-as-quick-as-running-linux-natively>
 
 ## Windows/WSL System Guide
 
 - TODO: How should the system be used with regard to Windows and WSL
-    - TODO: GUI applications managed with winget and all CLI tooling/development on WSL
-        - TODO: Once setup is decided, bring to GitHub setup scripts repo
+  - TODO: GUI applications managed with winget and all CLI tooling/development on WSL
+    - TODO: Once setup is decided, bring to GitHub setup scripts repo
