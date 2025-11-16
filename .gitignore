@@ -1,6 +1,3 @@
-# Dependency directories
-node_modules/
-
 # dotenv environment variable files
 .env
 .env.development.local
@@ -15,9 +12,10 @@ node_modules/
 logs
 *.log
 
-# Optional npm cache directory
+# Node
 .npm
+node_modules/
 
-# System files
+# System
 .DS_Store
 **/.DS_Store
