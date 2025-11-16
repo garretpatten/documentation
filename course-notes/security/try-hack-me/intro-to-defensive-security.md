@@ -34,14 +34,18 @@
   - Virus: a piece of code that attaches itself to a program
     - It is designed to spread from one computer to another
     - it works by altering, overwriting, and deleting files once it infects a computer
-  - Trojan Horse: a program that shows one desirable function but hides malicious function underneath
+  - Trojan Horse: a program that shows one desirable function but hides
+    malicious function underneath
   - Ransomware: a malicious program that encrypts the user's files
-    - Encryption makes the files unreadable without knowing the encryption password
-    - The attacker offers the user the encryption password if the user is willing to pay the ransom
+    - Encryption makes the files unreadable without knowing the encryption
+      password
+    - The attacker offers the user the encryption password if the user is
+      willing to pay the ransom
 - Malware Analysis:
   - Static analysis of the program without running it
     - Usually requires knowledge of assembly language
-  - Dynamic analysis of the program running in a controlled environment where it is monitored
+  - Dynamic analysis of the program running in a controlled environment
+    where it is monitored
 - A Security Information and Event Management (SIEM) system gathers
   security-related information and events from various sources and
   presents them via one system

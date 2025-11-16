@@ -20,7 +20,8 @@
   - Http(s)
     - Mostly using http 2.0 now
   - SigV4
-    - Calculating a signature can be intensive; ideal to avoid handling this yourself
+    - Calculating a signature can be intensive; ideal to avoid handling
+      this yourself
   - IAM Access Key (ID, Secret)
 - AWS CloudShell is a browser-based shell
 - AWS Cloud9 is an IDE for writing, running, and debugging code
@@ -30,9 +31,11 @@
       - Available on VS Code and IntelliJ and other IDEs
       - Collects your data, but you can opt out of that
       - Generates suggestions/completion
-        - Can write a comment and hit Enter and Code Whisperer will suggest the desired code
+        - Can write a comment and hit Enter and Code Whisperer will
+          suggest the desired code
       - Provides security scanning
-- [aws.amazon.com/developer/tools](http://aws.amazon.com/developer/tools) provides tools and docs and various languages
+- [aws.amazon.com/developer/tools](http://aws.amazon.com/developer/tools)
+  provides tools and docs and various languages
 
 ### Module 3: Getting Started with Development on AWS
 
@@ -44,18 +47,25 @@
   - Pagination suppport
 - SDK APIs (with varying levels of abstraction)
   - Low-level: has one method per service operation (like a 1 to 1 mapping)
-  - High-level: has one class per conceptual resource; defines service resources and individual resources (like a 1 to many mapping)
-    - High-level is simpler and object-oriented (cleaner to work with), but you get less options coming back in the response
+  - High-level: has one class per conceptual resource; defines service
+    resources and individual resources (like a 1 to many mapping)
+    - High-level is simpler and object-oriented (cleaner to work with),
+      but you get less options coming back in the response
 - AWS CLI syntax
-  - `(base call) aws (servce) s3 (subcommand) ls (target) s3://mybucket (options) --recursive`
+  - `(base call) aws (servce) s3 (subcommand) ls (target)
+s3://mybucket (options) --recursive`
 - `help` after any incomplete AWS command will print out docs
   - i.e. aws s3 help will display everything about s3
 - Tab x 2 after any incomplete AWS command will print all options to the console
-- `aws configure set cli_auto_prompt on` on CloudShell will activate CLI Auto Prompt
-  - Pressing Enter after any incomplete AWS command will show GUI to select further options in command
-    - Will also pull targets based on your account (great if you don't have resource names on hand)
+- `aws configure set cli_auto_prompt on` on CloudShell will activate CLI
+  Auto Prompt
+  - Pressing Enter after any incomplete AWS command will show GUI to
+    select further options in command
+    - Will also pull targets based on your account (great if you don't
+      have resource names on hand)
 - Service calls can be synchronous or asynchronous
-  - For asynchronous commands, can add `wait` before subcommand to wait for response
+  - For asynchronous commands, can add `wait` before subcommand to wait
+    for response
     - There are config options for waiting, like timeout
   - Languages in SDK have varying levels of support for waiting; examples:
     - .NET will need to use while loops and a polling mechanism
@@ -69,11 +79,14 @@
 
 - IAM: Identity and Access Management
 - Permissions are configured on a Role and a User basis
-  - Users have permissions and security credentials specific to the User in context (username, password, MFA, access keys, etc)
+  - Users have permissions and security credentials specific to the User
+    in context (username, password, MFA, access keys, etc)
   - Roles have permissions
-- Users authenticate and have base permissions; users assume roles that have more permissions
+- Users authenticate and have base permissions; users assume roles that
+  have more permissions
 - Users can be put in User Group buckets (dev, admin, etc)
-- AWS recommends using User Groups to manage permissions instead of assigning specific permission to specific users
+- AWS recommends using User Groups to manage permissions instead of
+  assigning specific permission to specific users
 - Permissions policies can be attached to:
   - Identity (Users, User Groups, and Roles)
   - Resources
@@ -88,24 +101,35 @@
   - Action (CRUD operation or subcommand)
   - Resource (AWS Object)
 - Policies can also have conditions
-  - For example, you can create a resource-based policy for all principals that disallows any operation on S3 buckets unless the IP Address falls within a certain CIDR range
-- Permissions Boundaries give you limits and cap what you are allowed to access
-  - For example, if your Identity Based Policy says you can do A, B, and C and your Permissions Boundary says you can do C, D, and E, then you can only actually do C
+  - For example, you can create a resource-based policy for all
+    principals that disallows any operation on S3 buckets unless the IP
+    Address falls within a certain CIDR range
+- Permissions Boundaries give you limits and cap what you are allowed to
+  access
+  - For example, if your Identity Based Policy says you can do A, B, and
+    C and your Permissions Boundary says you can do C, D, and E, then you
+    can only actually do C
 - Permissions consumption:
   - If resource has explicity deny, it is denied
   - If a resource has an explicit allow, it is allowed
   - If there is no explicit deny/allow, it is denied
-    - Principle of Least Privilege: permissions deny by default and an explicit deny overrides an explicit allow
+    - Principle of Least Privilege: permissions deny by default and an
+      explicit deny overrides an explicit allow
 - STS: Secure Token Service
 - ARN: Amazon Resource Name
-- CloudWatch launches with user authenticated with their access key and secret access key
-- `aws configure` lets you configure usability settings and also user profiles for log ins
+- CloudWatch launches with user authenticated with their access key and
+  secret access key
+- `aws configure` lets you configure usability settings and also user
+  profiles for log ins
   - For example: `aws configure --profile sourcegraph-admin`
-  - Assuming a profile in a command will execute that command in the context of that profile/user
-- IAM Policy Simulator enables you to test different actions with different permission policies (user, group, and role)
+  - Assuming a profile in a command will execute that command in the
+    context of that profile/user
+- IAM Policy Simulator enables you to test different actions with
+  different permission policies (user, group, and role)
 - `.aws/credentials` holds credentials for profiles
 - `.aws/config` holds items like region and output format for profiles
-  - Can have general config as well as resource config and API version locks
+  - Can have general config as well as resource config and API version
+    locks
 - AWS_PROFILE is an env variable that lets you set the default profile
 - Credential priority order (SigV4):
   - Code or CLI
@@ -120,14 +144,16 @@
   - Support web identity federation
 - To use instance profile in Cloud9:
   - Run `aws configure` and leave access key and secret access key blank
-  - Use AWS Explorer on the left of the IDE to verify you are using the instance profile in the correct region
+  - Use AWS Explorer on the left of the IDE to verify you are using the
+    instance profile in the correct region
 
 ### Module 5: Storage Options
 
 - Types of storage on AWS Cloud:
   - Block storage (EBS)
     - data is stored in unrelated blocks
-    - a change to part of a file only affects that block and not all blocks of the file
+    - a change to part of a file only affects that block and not all
+      blocks of the file
     - great for databases
     - lives in 1 availability zone (AZ) attached to 1 EC2 instance
   - File storage (EFS, Amazon FSx for Windows File Server/Lustre)
@@ -141,10 +167,12 @@
   - Object storage (S3, S3 Glacier Flexible Retrieval)
     - Saving in objects instead of unrelated blocks
     - Data being saved is converted into objects
-    - If you change anything about the file/content, you need to reupload the new object
+    - If you change anything about the file/content, you need to
+      reupload the new object
     - Archives, data warehouses, etc. best for write-once-read-many (WORM) workloads
     - Cheapest
-- EBS provides extreme performance and is the most expensive; S3 is less performant and the cheapest option
+- EBS provides extreme performance and is the most expensive; S3 is
+  less performant and the cheapest option
 - S3 Overview:
   - Reliability: 99.99% in SLA
   - Annual Durability: 99.999999999%
@@ -156,8 +184,12 @@
   - Performance and Scalability
   - Regional resource
   - Namespace globally unique
-    - This is because each object will have a URL associated with it and this must be unique
-    - There are additional partitions for the government and for China; bucket names can be repeated across the partitions (i.e. there can be a bucket with the same name in the normal AWS partition as well as the government partition)
+    - This is because each object will have a URL associated with it and
+      this must be unique
+    - There are additional partitions for the government and for China;
+      bucket names can be repeated across the partitions (i.e. there can
+      be a bucket with the same name in the normal AWS partition as well
+      as the government partition)
   - Flat structure for stored data
     - Folders are really file prefixes
   - Stores objects as unique key-value (where URL is the key)
@@ -167,54 +199,76 @@
   - Object removed
   - Object restored
   - Object replicated
-- For example, you could create a Lambda that unzips zip files and you can create an Event Notification that fires on new objects of type `.zip` and then triggers the unzip lambda function on that new file object
+- For example, you could create a Lambda that unzips zip files and you
+  can create an Event Notification that fires on new objects of type
+  `.zip` and then triggers the unzip lambda function on that new file
+  object
 - Each object has a version ID and object locking is supported
   - URL with have version ID as a URL param `...?versionId=uuid`
-- A general delete command marks an object and its versions for deletion but does not actually delete them
+- A general delete command marks an object and its versions for deletion
+  but does not actually delete them
   - You can permanently delete object versions
     - Can do each one with ARNs and a loop with CLI
     - Can check each and delete via Console GUI
 - Can tag objects in S3 that you can reference in permissions policies
 - Can set a Bucket (resource-based) Policy which will have PEAR specified
 - Access Point Policies break up Bucket Policy
-  - You may have a Bucket Policy that gives everyone allow access to run get commands
-  - You can then have Access Points that provide specific groups access to specific folders within the S3 bucket
-    - You could also specify additional actions specific groups are allowed to take on resources with a given tag
-- Bucket Names cannot use spaces because it will ultimately be an endpoint and must be DNS compatible
-- As you add Bucket Policies and Access Points, additional URLs will be created with those specific identiers going between `s3` and the `region` name
+  - You may have a Bucket Policy that gives everyone allow access to
+    run get commands
+  - You can then have Access Points that provide specific groups access
+    to specific folders within the S3 bucket
+    - You could also specify additional actions specific groups are
+      allowed to take on resources with a given tag
+- Bucket Names cannot use spaces because it will ultimately be an
+  endpoint and must be DNS compatible
+- As you add Bucket Policies and Access Points, additional URLs will be
+  created with those specific identiers going between `s3` and the
+  `region` name
 - `s3` and `s3api` commands can be used interchangeably
-  - Only difference in syntax and level of abstraction with the former being faster and more abstracted
-  - If `s3` cannot do what you need it to, then try `s3api` as it will have far more fine-grained options
+  - Only difference in syntax and level of abstraction with the former
+    being faster and more abstracted
+  - If `s3` cannot do what you need it to, then try `s3api` as it will
+    have far more fine-grained options
 - boto3 clients support you making REST API calls with the SDK
   - best rpactice to `close()` your client after you are finished using it
 
 ### Module 6: Storing and Hosting Your Application
 
-- To check if bucket name exists before you create one, use the head bucket request functionality
+- To check if bucket name exists before you create one, use the head
+  bucket request functionality
   - 200 means bucket exists
   - 404 menas bucket does not exist
   - 403 means bucket exists but in another account
-- For files bigger than 100 MB, you may want to do a multipart upload; you have to for files bigger than 5 GB
+- For files bigger than 100 MB, you may want to do a multipart upload;
+  you have to for files bigger than 5 GB
   - Parts are uploaded in parallel
   - Uploads can be paused and resumed
   - This is far easier with the high level commands
   - With low-level commands, there will be 6 different steps/operations
 - `head-object` facilitates retrieving metadata about a object
-- S3 Select allows you to retrieve only a subset of data from an object by using simple SQL expressions
+- S3 Select allows you to retrieve only a subset of data from an object
+  by using simple SQL expressions
   - Only works for CSV, JSON, and Apache Parquet
-  - Reduces load at application layer as the S3 Select will be processed at the resource level
-- Pre-signed URLs allow you to share objects in an S3 bucket for a limited amount of time
+  - Reduces load at application layer as the S3 Select will be processed
+    at the resource level
+- Pre-signed URLs allow you to share objects in an S3 bucket for a
+  limited amount of time
   - When time expires, it will result in a 403 access denied
   - `aws s3 pre-sign s3://bucket-name/object.fileExtension <expiryDesignation>`
-- S3 buckets can have lifecycle policies (i.e. delete versions older than a certain creation date)
-- High-level commands automatically handle multipart uploads and cleanup of incomplete uploads
+- S3 buckets can have lifecycle policies (i.e. delete versions older
+  than a certain creation date)
+- High-level commands automatically handle multipart uploads and cleanup
+  of incomplete uploads
 - Can `cp` or `sync` files between local environment and s3
   - Can `cp` with logic to exclude and include certain files
     - Can use exclue and include together
   - `-recursive` is particularly useful with these operations
-  - `sync` will not create duplicates and will delete files in order to sync states between local and s3
-- `aws s3 website` can allow you to create a website/endpoint for an S3 bucket
-- CORS policies define how web applications should load in resources from other domains
+  - `sync` will not create duplicates and will delete files in order to
+    sync states between local and s3
+- `aws s3 website` can allow you to create a website/endpoint for an S3
+  bucket
+- CORS policies define how web applications should load in resources from
+  other domains
 - Some services require pagination for responses
 
 ### Day 2
@@ -227,17 +281,22 @@
     - Key-value (Dynamo DB)
     - Graph (Neptune)
     - In-memory caching (ElastiCache)
-    - There are other options for Wide column, Time series, and Ledger databases among others
-- Relational databases scale vertically whereas non-relational databases scale horizontally
-  - Vertical Scaling is like a skyscraper where each floor gets more expensive than the last
-  - Horizontal Scaling is like an apartment complex where new buildings crop up to house more things and pre-existing things are not affected
+    - There are other options for Wide column, Time series, and Ledger
+      databases among others
+- Relational databases scale vertically whereas non-relational databases
+  scale horizontally
+  - Vertical Scaling is like a skyscraper where each floor gets more
+    expensive than the last
+  - Horizontal Scaling is like an apartment complex where new buildings
+    crop up to house more things and pre-existing things are not affected
 - DynamoDB
   - Performance at scale
     - 10 trillion requests per day
   - Enterprise ready
     - 99.999% availability
   - Low-latency queries
-    - Prime day had 150 million requests per second and only had single-digit milliseconds of latency
+    - Prime day had 150 million requests per second and only had
+      single-digit milliseconds of latency
   - Serverless
   - Fully managed
   - Fine-grainted access control
@@ -254,14 +313,16 @@
   - Name
   - Data type
   - Value
-- Primary Key is the combination of the Partition Key and Sort Key and must be unique
+- Primary Key is the combination of the Partition Key and Sort Key and
+  must be unique
 - Read and Write Throughput are represented as:
   - Read Capacity Unit (RCU):
   - Write Capacity Unit (WCU): Number of 1KB writes per second
 - There is a capacity calculator to help you determine DB configuration
 - On-Demand Read/Write: you only pay for what you need but it's more expensive
 - Provisioned: you allocate capacity ahead of time and it's cheaper
-- Eventual consistency (the default) uses half the provisioned read capacity and you may be a second behind realtime
+- Eventual consistency (the default) uses half the provisioned read
+  capacity and you may be a second behind realtime
 - Secondary Indexes: you can query data based on non-primary key attributes
   - Global secondary indexes:
     - Can have up to 20
@@ -271,8 +332,10 @@
   - Local secondary indexes:
     - Can have up to 5
     - Must be created on table creation and cannot be deleted
-- Secondary indexes do not need to be unique (think favorited items in a photo album or notes app)
-- Hot Partition is a partition which sees far more traffic than others which can be a problem is RCU/WCUs are divided equally
+- Secondary indexes do not need to be unique (think favorited items in
+  a photo album or notes app)
+- Hot Partition is a partition which sees far more traffic than others
+  which can be a problem is RCU/WCUs are divided equally
   - Adaptive Capacity and Burst Capacity help deal with this
     - Adaptive Capacity allocates capacity as needed to partitions
     - Burst saves unused partition capacity for 5 minutes to handle spikes in throughput
@@ -283,7 +346,8 @@
   - SDK
   - CLI
   - etc
-- When using the CLI to put data into a table, you need to specify data types for attributes
+- When using the CLI to put data into a table, you need to specify data
+  types for attributes
 - High-Level Programmatic Interfaces:
   - Object Persistence Interface
     - Data types are mapped
@@ -292,7 +356,8 @@
   - Document Interface
     - Data types are implied
     - Java, .NET, Node.js, AWS SDK, etc
-- Whether High or Low-Level abstraction, all interactions boil down to AWS API calls
+- Whether High or Low-Level abstraction, all interactions boil down to
+  AWS API calls
 - Unsuccessful requests receive an error code, exception, and a message
 
 ### Module 8: Processing Database Transactions
@@ -300,27 +365,35 @@
 - Choose partition keys on what will distribute queries most evenly
 - Can create tables through GUI, SDK, CLI
   - For CLI, you can reference a JSON or YAML document for configuration
-- Table creation is an async operation, so you'll want to use waiters when creating through the SDK
-- You can later get your table, update certain configurations, and then update the table
-- With dynamodb CLI, by default a `put-item` may will overwrite an existing item if the supplied item key already exists in the database
+- Table creation is an async operation, so you'll want to use waiters
+  when creating through the SDK
+- You can later get your table, update certain configurations, and then
+  update the table
+- With dynamodb CLI, by default a `put-item` may will overwrite an
+  existing item if the supplied item key already exists in the database
 - You can use `batch-write-item` to bulk add (only) new items to a database
 - `get-item` is the most performant and matches supplied criteria after a full scan
 - There is also a `query` subcommand that can support more complex querying logic
-- Scan operations can be divided into multiple threads that scan just a section of the database in parallel
+- Scan operations can be divided into multiple threads that scan just a
+  section of the database in parallel
   - If you are often having to do scans, you likely need a secondary index
 - `update-item` updates only passed attributes
 - Put, Update, and Delete all support conditional write operations
   - "Make this update if this conditional expression is true"
 - DynamoDB Caching can be really useful in read-heavy databases
   - ElastiCache is a caching layer (for Redis and other)
-  - DynamoDB Accelerator (DAX) is the DynamoDB caching layer that allows you to go from milliseconds of latency to microseconds
-- When writing with DAX, the update is written to DAX after being written to the DynamoDB database, so you never need to worry about keeping your cache up to date with writes
+  - DynamoDB Accelerator (DAX) is the DynamoDB caching layer that
+    allows you to go from milliseconds of latency to microseconds
+- When writing with DAX, the update is written to DAX after being
+  written to the DynamoDB database, so you never need to worry about
+  keeping your cache up to date with writes
   - This means more latency for write-heavy applications
 - NoSQL key design conepts:
   - size
   - shape
   - velcocity
-- You cannot specify conditions on individual put and delete requests and the `batch-write-item` does not return deleted items
+- You cannot specify conditions on individual put and delete requests and
+  the `batch-write-item` does not return deleted items
 
 ### Module 9: Processing Your Application Logic
 
@@ -330,35 +403,47 @@
     - Can run on Fargate which is serverless)
   - Serverless: Lambda (event-driven serverless compute)
 - AWS provides base images for ECS and EKS
-- You pay per request with Lambda and you pay per resource consumption with everything else
+- You pay per request with Lambda and you pay per resource consumption
+  with everything else
 - Lambda:
   - Event Source: changes in resource state, http requests, API calls, etc
   - Function: your code
   - Service: Amazon services and resources on the internet
-- Lambas can fire on a huge set of event sources, many of which are events in other AWS services
-  - Lambdas are often paired with API Gateway -- for example, some call to the API Gateway will invoke some lambda function
+- Lambas can fire on a huge set of event sources, many of which are
+  events in other AWS services
+  - Lambdas are often paired with API Gateway -- for example, some call
+    to the API Gateway will invoke some lambda function
 - Anatomy of a Lambda function:
   - Access permissions
   - Triggers: event source
   - Configurations
     - Concurrency
     - Memory
-      - If you increase memory, you will use more virtual CPUs (out of your control) and will have a higher cost
+      - If you increase memory, you will use more virtual CPUs (out of
+        your control) and will have a higher cost
       - Can get up to 10GB of ephemeral storage
     - Timeouts
     - etc
   - Code: logic to be invoked
   - Runtime: Java, .NET, Node.js, Python, etc
   - Layers: reuse/share code
-    - Can create layers which are basically dependencies you can include in multiple lambdas
+    - Can create layers which are basically dependencies you can include
+      in multiple lambdas
       - This can enable you to use your own runtime if you wanted to
 - Lambdas can be invoked:
   - Synchronously (with direct invocation and caller waits on lambda response)
-  - Asynchronously (pushed to event queue where they are processed as bandwidth allows)
-  - Polling (pulled from queue based event source where they are processed as bandwidth allows)
-- SnapStart (only for Java right now) offers 10x faster function start up performance (using Firecracker)
-- Invocations are routed to a Lambda runtime environment, or a new environment is created
-  - Environments will stay active (warm) for about 15 minutes; if Lambda is invoked while there still is a warm environment, that environent is used again; if no warm environment exists, the Lambda will cold start a new environment
+  - Asynchronously (pushed to event queue where they are processed as
+    bandwidth allows)
+  - Polling (pulled from queue based event source where they are
+    processed as bandwidth allows)
+- SnapStart (only for Java right now) offers 10x faster function start
+  up performance (using Firecracker)
+- Invocations are routed to a Lambda runtime environment, or a new
+  environment is created
+  - Environments will stay active (warm) for about 15 minutes; if Lambda
+    is invoked while there still is a warm environment, that environent
+    is used again; if no warm environment exists, the Lambda will cold
+    start a new environment
 - Permissions
   - Invocation Permissions:
     - Grant event source permissions to invoke Lambda (through a resource-based policy)
@@ -366,9 +451,15 @@
     - Execution Role that grants the Lambda needed resource permissions
 - Rekognition is an Amazon service that will tell you what an image is
 - Lambda permissions are under Configuration > Permissions
-  - By Resource permissions will show resource-based policies that allow event sources to invoke lambda
-  - Execution Role can add permissions policies so that the Lambda can access the data it needs to to perform its function
-    - For example, if an image upload to an S3 bucket should trigger a Lambda to use Rekognition to return what the image is; resource-based policity will allow S3 object creation to invoke Lambda, and Execution Role policies will allow Lambda to read the object data from S3
+  - By Resource permissions will show resource-based policies that allow
+    event sources to invoke lambda
+  - Execution Role can add permissions policies so that the Lambda can
+    access the data it needs to to perform its function
+    - For example, if an image upload to an S3 bucket should trigger a
+      Lambda to use Rekognition to return what the image is;
+      resource-based policity will allow S3 object creation to invoke
+      Lambda, and Execution Role policies will allow Lambda to read the
+      object data from S3
 - Lambda is stateless:
   - No access to underlying infrastructure
   - External storage is required to persist data from Lambda
@@ -376,14 +467,21 @@
   - Can either enforce access control or not
 - Handler function is the code to be run upon Lambda invocation
 - Event object: data sent during invocation (like function params)
-- Context object: methods and properties that provide information about the current runtime environment(like runtime versions)
-- Environment variables can be used to set minor configuration details (like bucket names or table names)
+- Context object: methods and properties that provide information about
+  the current runtime environment(like runtime versions)
+- Environment variables can be used to set minor configuration details
+  (like bucket names or table names)
   - Lambdas can pull in these environment variables at runtime
-  - If one of these values needs to change, the environment variables can be updated without having to redeploy the Lambdas (and this can be done with the CLI with `update-function-configuration`)
+  - If one of these values needs to change, the environment variables
+    can be updated without having to redeploy the Lambdas (and this can
+    be done with the CLI with `update-function-configuration`)
 - You can use layers from 3rd parties by specifying an ARN
-- Serverless Application Model (SAM) allows you to test and debug (step-through) your servlerless applications/functions locally
-  - An output file will contain the output from Lambda and the terminal will print out an status code
-- If you enable DynamoDB streams on a table, you can associate a Lambda with that stream
+- Serverless Application Model (SAM) allows you to test and debug
+  (step-through) your servlerless applications/functions locally
+  - An output file will contain the output from Lambda and the terminal
+    will print out an status code
+- If you enable DynamoDB streams on a table, you can associate a Lambda
+  with that stream
 
 ### Module 10: Managing the APIs
 
@@ -410,8 +508,10 @@
   - Mock (you configure returned status code)
 - API Gateway can provide request mapping, validation, and more
 - Can test APIs in Console or through CLI prior to actually deploying them
-- Stage (key-value pair) variables can allow you to test with different contexts in Prod vs Dev/Sandbox
-- Canary Releases allow you to test out a change with a subset of requests before promoting a change to production fully
+- Stage (key-value pair) variables can allow you to test with different
+  contexts in Prod vs Dev/Sandbox
+- Canary Releases allow you to test out a change with a subset of
+  requests before promoting a change to production fully
 
 ### Module 11: An Approach to Building a Modern Application
 
@@ -419,7 +519,8 @@
   - Architecture patterns: microservices
   - Software delivery: devops
   - Operational model: serverless
-- Monoliths do everything, whereas microservices do one thing adn communicate through API calls
+- Monoliths do everything, whereas microservices do one thing adn
+  communicate through API calls
 - Monoliths:
   - Does everything
   - Tightly coupled
@@ -454,8 +555,10 @@
   - Domain-driven design
     - microservice is within context of domain
     - defines integration points with other domains
-- AWS Compute Optimizer will help you identify if you are under or over taxing your provisioned resources
-- AWS Trusted Advisor will give you guidance on optimizing costs (primarily under-utilized resources)
+- AWS Compute Optimizer will help you identify if you are under or over
+  taxing your provisioned resources
+- AWS Trusted Advisor will give you guidance on optimizing costs
+  (primarily under-utilized resources)
 - Big constructs are Regions and there are at least 3 AZs in each Region
   - Servers within a Region are at most 60 miles apart
 - Interaction Patterns:
@@ -478,8 +581,11 @@
   - Common strategy is Strangler Pattern
     - Monolith is put behind API Gateway
     - Functionality is pulled out bit by bit into microservices
-    - API Gateway can then direct to monlith or microservice depending on calling context
-- Microservices lead to smaller packages/modules that can be built, tested, released, and deployed independently and frequently creating faster feedback loops and reducing overhead for CI/CD pipelines
+    - API Gateway can then direct to monlith or microservice depending
+      on calling context
+- Microservices lead to smaller packages/modules that can be built,
+  tested, released, and deployed independently and frequently creating
+  faster feedback loops and reducing overhead for CI/CD pipelines
 - Traditional Deployments
   - Provision instance
   - Update OS
@@ -496,12 +602,16 @@
   - Scales with usage
   - Seldom pay for idle servers
   - Availability and fault tolerance is built in
-- AWS Health Dashboard can help you troubleshoot any issues with your underlying server architecture
+- AWS Health Dashboard can help you troubleshoot any issues with your
+  underlying server architecture
   - There are statuses for services and reports of any degraded service
 - AWS Step Functions
-  - Orchestration of complex distributed workflows: manage state across distributed tasks while reducing application code and improving resiliency
+  - Orchestration of complex distributed workflows: manage state across
+    distributed tasks while reducing application code and improving
+    resiliency
   - You pay for state transitions (trigger request/event)
-  - Coordinate the components of distributed applications using visual workflows that manage:
+  - Coordinate the components of distributed applications using visual
+    workflows that manage:
     - failures
     - retries
     - parallelization
@@ -515,10 +625,12 @@
 
 ### Module 12: Authenticating Your Application Users
 
-- Amazon Cognito sits in front of your application and handles authentication and authorization
+- Amazon Cognito sits in front of your application and handles
+  authentication and authorization
 - Authentication is verifying users are who they say they are
 - Authorization is verifying whether users can perform the desired action
-- Cognito: provides authentication authorization, and user management for your web and mobile apps
+- Cognito: provides authentication authorization, and user management
+  for your web and mobile apps
 - AWS Services in Scope by Compliance Program
 - User Pool: sign-up/sign-in process of users and passwords
   - Define user flows
@@ -562,8 +674,11 @@
     - Takes application name
     - Takes CodeDeploy group
 - CodePipeline can orchestrate CodeCommit, CodeBuild, and CodeDeploy
-- Once CodeDeploy groups are set up and CodePipelines are created for deployments to specific groups, code updates can automatically trigger new deployments
-- Cloud9 can be set up as a shared environment for multiple devOps engineers to be working on deployments
+- Once CodeDeploy groups are set up and CodePipelines are created for
+  deployments to specific groups, code updates can automatically trigger
+  new deployments
+- Cloud9 can be set up as a shared environment for multiple devOps
+  engineers to be working on deployments
 - AWS CloudFormation enables Infra as Code
 - AWS SAM (Serverless Application Model):
   - robust and easy way to do serverless deployments
@@ -596,7 +711,8 @@
 - 3 Pillars:
   - Logging - record of events
     - CloudWatch Logs
-  - Metrics - numerical representation of data used to analyze overall performance and behavior
+  - Metrics - numerical representation of data used to analyze overall
+    performance and behavior
     - CloudWatch Metrics
   - Tracing - follow user's activity in application to better understand user experience
     - AWS XRay
@@ -606,14 +722,21 @@
 - CloudWatch Key Components
   - Metric: data about the performance of your system
   - Dimensions: name/value pair that is part of the identity of a metric
-  - Alarms: watch a single metric over a specified time period and perform actions based on the metric
+  - Alarms: watch a single metric over a specified time period and
+    perform actions based on the metric
   - Logs: AWS provides many types of logs
-- Alarms start out with an `insufficient data` state; after a few minutes this should transition to `OK` or `Alarm` based on the metric
-- An Alarm can only monitor a single metric; although, a Composite Alarm can monitor multiple metrics
-- Application Insights provides a nice dashboard of your various metrics and alarms; great for visibility into your infrastructure and application
+- Alarms start out with an `insufficient data` state; after a few
+  minutes this should transition to `OK` or `Alarm` based on the metric
+- An Alarm can only monitor a single metric; although, a Composite Alarm
+  can monitor multiple metrics
+- Application Insights provides a nice dashboard of your various metrics
+  and alarms; great for visibility into your infrastructure and
+  application
 - You can create up to 3 custom dashboard for free
-- X Ray Console shows a visual representation of the paths and connections between various resources in your infrastructure
-  - It will show a stacktrace of sorts with how long each request/interaction took as well as the visual chart
+- X Ray Console shows a visual representation of the paths and
+  connections between various resources in your infrastructure
+  - It will show a stacktrace of sorts with how long each
+    request/interaction took as well as the visual chart
 - X Ray has an API reachable via the SDK and CLI
 
 ### Module 15: Course Wrap-Up

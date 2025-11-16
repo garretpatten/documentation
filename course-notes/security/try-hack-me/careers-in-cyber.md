@@ -27,11 +27,14 @@
 
 ## Incident Responder
 
-- Incident responders respond productively and efficiently to security breaches
+- Incident responders respond productively and efficiently to security
+  breaches
 - Responsibilities:
   - Developing and adopting a thorough, actionable incident response plan
-  - Maintaining strong security best practices and supporting incident response measures
-  - Post-incident reporting and preparation for future attacks, considering learnings and adaptations to take from incidents
+  - Maintaining strong security best practices and supporting incident
+    response measures
+  - Post-incident reporting and preparation for future attacks, considering
+    learnings and adaptations to take from incidents
 
 ## Digital Forensics Examiner
 
@@ -51,8 +54,10 @@
   task revolves around converting compiled programs from machine language
   to readable code, usually in a low-level language
 - Responsibilities:
-  - Carry out static analysis of malicious programs, which entails reverse-engineering
-  - Conduct dynamic analysis of malware samples by observing their activities in a controlled environment
+  - Carry out static analysis of malicious programs, which entails
+    reverse-engineering
+  - Conduct dynamic analysis of malware samples by observing their
+    activities in a controlled environment
   - Document and report all the findings
 
 ## Penetration Tester
@@ -60,7 +65,8 @@
 - A penetration tester's job role is to test the security of the systems
   and software within a company - this is achieved through attempts to
   uncover flaws and vulnerabilities through systemized hacking
-- Penetration testers exploit these vulnerabilities to evaluate the risk in each instance
+- Penetration testers exploit these vulnerabilities to evaluate the risk
+  in each instance
 - Responsibilities:
   - Conduct tests on computer systems, networks, and web-based applications
   - Perform security assessments, audits, and analyse policies
@@ -74,6 +80,9 @@
 - This job role requires imitating cyber criminals' actions, emulating
   malicious attacks, retaining access, and avoiding detection
 - Responsibilities:
-  - Emulate the role of a threat actor to uncover exploitable vulnerabilities, maintain access and avoid detection
-  - Assess organizations' security controls, threat intelligence, and incident response procedures
-  - Evaluate and report on insights, with actionable data for companies to avoid real-world instances
+  - Emulate the role of a threat actor to uncover exploitable
+    vulnerabilities, maintain access and avoid detection
+  - Assess organizations' security controls, threat intelligence, and
+    incident response procedures
+  - Evaluate and report on insights, with actionable data for companies
+    to avoid real-world instances
