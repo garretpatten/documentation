@@ -61,13 +61,13 @@ that user will live at the following: `/mnt/wslg/distro/home/garret`.
   under the [Windows 11](https://www.techradar.com/news/windows-11-home-and-pro)
   release was a close match to the performance of the distro run on bare
   metal
-  - *Phoronix* tried to gauge the improvements of the WSL2 subsystems of the
+  - _Phoronix_ tried to gauge the improvements of the WSL2 subsystems of the
     upcoming Windows release, by pitting it against native [Ubuntu
     20.04](https://www.techradar.com/reviews/ubuntu-2004-lts-focal-fossa)
     and the Ubuntu 21.10 installations
   - "Out of 130 tests in total, Windows 11 WSL2 Ubuntu 20.04 LTS managed to
     run at 94% the speed of bare metal Ubuntu 20.04 LTS on the same system,"
-    observes *Phoronix*.
+    observes _Phoronix_.
 - Source: <https://www.techradar.com/news/windows-11-wsl-2-is-almost-as-quick-as-running-linux-natively>
 
 ## Windows/WSL System Guide

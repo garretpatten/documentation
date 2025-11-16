@@ -23,7 +23,7 @@
       server/machine running the Docker Container
   - `CMD` takes an array of string commands (like `["npm", "start"]`)
 - To build a Docker Image given a project with a Dockerfile, run `docker build
-  -t <tagNameForImage> <path/to/working/directory>`
+-t <tagNameForImage> <path/to/working/directory>`
   - If you have the working directory checked out, you can simply supply `.`
     as the path
   - Pro Tip: Set up a username on Docker Hub and use tags like:
@@ -31,14 +31,14 @@
 - You can use the generated Image as a base Image for other Dockerfiles or
   as a template for running a Container
 - To run a Docker Image in a Container, use `docker run -p
-  <localPort>:<exposedPortInDockerfile>` followed by the Image ID or the tag
+<localPort>:<exposedPortInDockerfile>` followed by the Image ID or the tag
   name (the Image ID will be in the output of a successful `docker build`
   execution)
 - Volumes are used to persist information from running Docker Containers on a
   host machine
   - `docker volume create <myVolumeName>`
 - To mount a volume for a running Container: `docker run --mount
-  source=<myVolumeName>,target=<containerDirectory>`
+source=<myVolumeName>,target=<containerDirectory>`
 - Docker Compose is a tool for running multiple Docker Containers at the same
   time
   - Each Container should only run one process, so if you need to run

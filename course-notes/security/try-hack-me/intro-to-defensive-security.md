@@ -3,7 +3,9 @@
 - Defensive security is concerned with two main tasks:
   - Preventing intrusions from occurring
   - Detecting intrusions when they occur and responding properly
-- Security Operations Center (SOC) - a team of cyber security professionals that monitors the network and its systems to detect malicious cyber security events
+- Security Operations Center (SOC) - a team of cyber security professionals
+  that monitors the network and its systems to detect malicious cyber
+  security events
   - Vulnerabilities
   - Policy Violations
   - Unauthorized Activity
@@ -40,7 +42,10 @@
   - Static analysis of the program without running it
     - Usually requires knowledge of assembly language
   - Dynamic analysis of the program running in a controlled environment where it is monitored
-- A Security Information and Event Management (SIEM) system gathers security-related information and events from various sources and presents them via one system
-- There are many open-source databases out there where you can perform a reputation and location check for IP Addresses
+- A Security Information and Event Management (SIEM) system gathers
+  security-related information and events from various sources and
+  presents them via one system
+- There are many open-source databases out there where you can perform a
+  reputation and location check for IP Addresses
   - AbuseIPDB
   - Cisco Talos Intelligence

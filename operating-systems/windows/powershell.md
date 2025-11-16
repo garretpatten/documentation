@@ -41,7 +41,7 @@
   - pass the output to another cmdlet (with the Pipeline `|`)
   - use specific object cmdlets to extract information
 - To check methods of an object returned by a cmdlet: `Get-Command |
-  Get-Member -MemberType Method`
+Get-Member -MemberType Method`
 - The `Select-Object` cmdlet is used to create a new object from
   properties pulled out of the output of another cmdlet
   - Flags:
