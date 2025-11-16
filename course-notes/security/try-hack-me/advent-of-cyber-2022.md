@@ -212,13 +212,13 @@
       and making the scan a little stealthier: `nmap -sS <ipAddress>`
     - A **Ping Scan** allows scanning the live hosts in the network
       without going deeper and checking for ports services etc: `nmap -sn
-      <ipAddress>`
+<ipAddress>`
     - An **Operating System Scan** allows scanning of the type of OS
       running on a live host: `nmap -sV <ipAddress>`
   - `Nikto` is open-source software that allows scanning websites for
     vulnerabilities; and, it enables looking for subdomains, outdated
     servers, debug messages etc., on a website: `nikto -host
-    <ipAddress>`
+<ipAddress>`
 
 ## Day 5
 
@@ -446,7 +446,7 @@
   network connections and route the request through a socks proxy
   instead
   - An example with Nmap: `proxychains -q nmap -n -sT -Pn -p
-    22,80,443,5432 MACHINE_IP`
+22,80,443,5432 MACHINE_IP`
 
 ## Day 10
 
@@ -708,7 +708,7 @@
     alphabet regardless of case
   - Wildcard Operator: `.`
   - The `` operator is used if you don't care if the preceding token
-    matches anything or not, while the`+` operator is used if you want
+matches anything or not, while the`+` operator is used if you want
     to make sure that it matches at least once
   - To match a string that is alphanumeric and case insensitive, our
     pattern would be `[a-zA-Z0-9]+`
