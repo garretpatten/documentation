@@ -1,6 +1,6 @@
-# Pull Request Template
+<!-- markdownlint-disable -->
 
-## Changes
+### Changes
 
 -
 

@@ -1,10 +1,10 @@
-# Issue Template
+<!-- markdownlint-disable -->
 
-## Issue Description
+### Issue Description
 
 -
 
-### Link to Document
+### Link to Document (if applicable)
 
 -
 
