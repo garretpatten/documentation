@@ -29,7 +29,8 @@ When prompted:
 gpg --list-secret-keys --keyid-format=long
 ```
 
-Look for the line starting with `sec`. The key ID is the string after the `/` (e.g., `sec   rsa4096/ABC123DEF456 2024-01-01` → key ID is `ABC123DEF456`).
+Look for the line starting with `sec`. The key ID is the string after the `/`
+(e.g., `sec   rsa4096/ABC123DEF456 2024-01-01` → key ID is `ABC123DEF456`).
 
 ## 4. Add Public Key to GitHub
 
@@ -37,7 +38,8 @@ Look for the line starting with `sec`. The key ID is the string after the `/` (e
 gpg --armor --export <KEY_ID>
 ```
 
-Copy the entire output (including `-----BEGIN PGP PUBLIC KEY BLOCK-----` and `-----END PGP PUBLIC KEY BLOCK-----`), then:
+Copy the entire output (including `-----BEGIN PGP PUBLIC KEY BLOCK-----` and
+`-----END PGP PUBLIC KEY BLOCK-----`), then:
 
 1. Go to GitHub → Settings → SSH and GPG keys
 2. Click "New GPG key"
@@ -60,7 +62,8 @@ git commit --allow-empty -m "test"
 git log --show-signature -1
 ```
 
-You should see `Good signature` in the output. Check your GitHub commits to see the "Verified" badge.
+You should see `Good signature` in the output. Check your GitHub commits to
+see the "Verified" badge.
 
 ## 7. Generate Revocation Certificate
 
@@ -68,4 +71,5 @@ You should see `Good signature` in the output. Check your GitHub commits to see 
 gpg --output revoke-<KEY_ID>.asc --gen-revoke <KEY_ID>
 ```
 
-Store this certificate securely. Use it to revoke your key if it's compromised or lost. You'll need to upload it to GitHub or a keyserver.
+Store this certificate securely. Use it to revoke your key if it's
+compromised or lost. You'll need to upload it to GitHub or a keyserver.

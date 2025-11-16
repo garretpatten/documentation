@@ -1,30 +1,49 @@
 # Elastic Beanstalk Cheat Sheet
 
-- **Elastic Beanstalk** handles the deployment, from capacity provisioning, load balancing, auto-scaling to application health monitoring.
-- When you want to run a web application but you don't want to have to think about the underlying infrastructure
-- It costs nothing to use Elastic Beanstalk (only the resources it provisions, e.g. RDS, ELB, EC2)
-- Recommended for test or development apps; not recommended for production use
-- You can choose from the following preconfigured platforms: Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker
-- You can run containers on ED either in Single-container or Multi-container, these containers are running on ECS instead of EC2
+- **Elastic Beanstalk** handles the deployment, from capacity provisioning,
+  load balancing, auto-scaling to application health monitoring.
+- When you want to run a web application but you don't want to have to think
+  about the underlying infrastructure
+- It costs nothing to use Elastic Beanstalk (only the resources it
+  provisions, e.g. RDS, ELB, EC2)
+- Recommended for test or development apps; not recommended for production
+  use
+- You can choose from the following preconfigured platforms: Java, .NET,
+  PHP, Node.js, Python, Ruby, Go, and Docker
+- You can run containers on ED either in Single-container or Multi-container,
+  these containers are running on ECS instead of EC2
 - You can launch either a **Web Environment** or a **Worker Environment**
-  - **Web Environments** come in two types: **Single-Instance** or **Load Balanced**
-    - **Single-Instance Environment** launches a single EC2 instance, an EIP is assigned to the EC2
-    - **Load Balanced Environment** launches EC2 instances behind an ELB managed by an ASG
-  - **Worker Environments** create an SQS queue, install the SQS daemon on the EC2 instances, and has ASG scaling policy which will add or remove instances based on queue size
+  - **Web Environments** come in two types: **Single-Instance** or **Load
+    Balanced**
+    - **Single-Instance Environment** launches a single EC2 instance, an EIP
+      is assigned to the EC2
+    - **Load Balanced Environment** launches EC2 instances behind an ELB
+      managed by an ASG
+  - **Worker Environments** create an SQS queue, install the SQS daemon on the
+    EC2 instances, and has ASG scaling policy which will add or remove
+    instances based on queue size
 - EB has the following **Deployment Policies**:
-  - **All At Once** takes all servers out of service, applies changes, puts serves back in service
+  - **All At Once** takes all servers out of service, applies changes, puts
+    serves back in service
     - Fast, but has downtime
   - **Rolling** updates servers in batches
     - Reduced capacity, based on batch size
   - **Rolling with Additional Batch** adds new servers in batches to replace old
     - Never reduces capacity
-  - **Immutable** creates the same amount of servers and switches all at once to new servers (and removes old servers)
-- Rolling deployment policies require an ELB, so it cannot be used with Single-Instance Web Environments
-- In-Place deployment is when deployment occurs within the environment (all deployment policies are In-Place)
+  - **Immutable** creates the same amount of servers and switches all at
+    once to new servers (and removes old servers)
+- Rolling deployment policies require an ELB, so it cannot be used with
+  Single-Instance Web Environments
+- In-Place deployment is when deployment occurs within the environment (all
+  deployment policies are In-Place)
 - Blue/Green is when deployment swaps environments (outside an environment)
-  - When you have external resources such as RDS which cannot be destroyed, it is suited for Blue/Green
+  - When you have external resources such as RDS which cannot be destroyed,
+    it is suited for Blue/Green
 - `.ebextensions` is a folder which contains all configuration files
-- With EB, you can provide a **Custom Image** which can improve provisioning times
-- If you let Elastic Beanstalk create the RDS instance, that means when you delete your environment, it will delete the database
+- With EB, you can provide a **Custom Image** which can improve provisioning
+  times
+- If you let Elastic Beanstalk create the RDS instance, that means when you
+  delete your environment, it will delete the database
   - This setup is intended for development and test environments
-- `Dockerrun.aws.json` is similar to an ECS Task Definition files and defines multi container configuration
+- `Dockerrun.aws.json` is similar to an ECS Task Definition files and
+  defines multi container configuration

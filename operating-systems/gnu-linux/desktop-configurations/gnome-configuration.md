@@ -22,7 +22,8 @@ _Source: https://aur.archlinux.org/packages/gdm-settings_
 
 ## Gnome Extensions
 
-_Can be downloaded from:_ https://extensions.gnome.org/ once pre-requisite steps are completed
+_Can be downloaded from:_ https://extensions.gnome.org/ once pre-requisite
+steps are completed
 
 ### User Extensions
 

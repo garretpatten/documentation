@@ -10,7 +10,9 @@
     - `sudo mkdir -p /etc/yubico`
     - `sudo cp ~/.config/yubico/u2f_keys /etc/yubico/u2f_keys`
     - `sudo chmod 644 /etc/yubico/u2f_keys`
-    - Add the following line to pam.d files in bullets below: `auth sufficient pam_u2f.so authfile=/etc/yubico/u2f_keys`
+    - Add the following line to pam.d files in bullets below: `auth sufficient
+      pam_u2f.so authfile=/etc/yubico/u2f_keys`
       - sudo (for sudo usage)
       - gdm-password (for lock screen/login)
-  - [PAM.d Information](https://www.digitalocean.com/community/tutorials/how-to-use-pam-to-configure-authentication-on-an-ubuntu-12-04-vps)
+  - [PAM.d
+    Information](https://www.digitalocean.com/community/tutorials/how-to-use-pam-to-configure-authentication-on-an-ubuntu-12-04-vps)
