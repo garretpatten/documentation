@@ -49,7 +49,8 @@
   race, etc.
 - It is the responsibility of the end user to ensure that what the LLM
   produces is accurate. Some considerations to keep in mind:
-  - Evaluate suitability: ensure AI fits the task and does not reinforce harmful biases.
+  - Evaluate suitability: ensure AI fits the task and does not reinforce
+    harmful biases.
   - Get approval: obtain company consent before using AI on projects.
   - Protect privacy: use secure tools and avoid exposing sensitive data.
   - Validate outputs: review all AI-generated content before sharing.
@@ -153,7 +154,7 @@
     the conversation ends (e.g. "At the end of our conversation, provide
     a summary of the advice you provided.")
 
-## Additional Notes
+## Pro Tips
 
 - A couple Pro-tips
   - You can combine chain of thought and tree of throught prompting by
