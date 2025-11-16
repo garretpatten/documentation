@@ -24,11 +24,11 @@
 - `dirb <URL> <pathToWordlist>`
 - `dnsrecon -t brt -d <URL>`
 - `ffuf -w <pathToWordlist> -X <REQUEST_METHOD> -d
-  <ARGUMENTS_TO_SEND_FUZZ_VAR> -u <URL>`
+<ARGUMENTS_TO_SEND_FUZZ_VAR> -u <URL>`
   - `mr <PAGE_CONTENT_TO_VERIFY_RESULT>`
   - `fc <STATUS_CODE_TO_VERIFY_RESULTS>`
   - `w` flag can point to multiple things: `w
-    pathToUsernames.txt:W1,pathToPasswords.txt:W2` which you can then plug
+pathToUsernames.txt:W1,pathToPasswords.txt:W2` which you can then plug
     into the `d` flag like "username=W1&password=W2"
 - `gobuster dir --url <URL> -w <pathToWordlist>`
 - `nmap -sV -sC <IP> -Pn` will execute a network mapper port scan
