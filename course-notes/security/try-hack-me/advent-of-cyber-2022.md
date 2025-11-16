@@ -1,10 +1,10 @@
+<!-- markdownlint-disable MD013 -->
+
 # Advent of Cyber 2022
 
 ## Day 1
 
-- Security frameworks are documented processes that define policies and
-  procedures organizations should follow to establish and manage security
-  controls
+- Security frameworks are documented processes that define policies and procedures organizations should follow to establish and manage security controls
   - they are blueprints for identifying and managing the risks they may
     face and the weaknesses in place that may lead to an attack
 - National Institute of Standards and Technology (NIST) Cybersecurity Framework (CSF)
@@ -204,17 +204,9 @@
     identifies the network's vulnerabilities in an automated way that
     helps determine whether the system may be threatened or exploited
 - Scanning Tools:
-  - `Network Mapper (nmap)` is a popular tool used to carry out port
-    scanning, discover network protocols, identify running services,
-    and detect operating systems on live hosts
-    - A **TCP SYN Scan** gets the list of live hosts and associated
-      ports on the hosts without completing the TCP three-way handshake
-      and making the scan a little stealthier: `nmap -sS <ipAddress>`
-    - A **Ping Scan** allows scanning the live hosts in the network
-      without going deeper and checking for ports services etc: `nmap -sn
-<ipAddress>`
-    - An **Operating System Scan** allows scanning of the type of OS
-      running on a live host: `nmap -sV <ipAddress>`
+  - `Network Mapper (nmap)` is a popular tool used to carry out port scanning, discover network protocols, identify running services, and detect operating systems on live hosts - A **TCP SYN Scan** gets the list of live hosts and associated ports on the hosts without completing the TCP three-way handshake and making the scan a little stealthier: `nmap -sS <ipAddress>` - A **Ping Scan** allows scanning the live hosts in the network without going deeper and checking for ports services etc: `nmap -sn
+<ipAddress>` - An **Operating System Scan** allows scanning of the type of OS
+    running on a live host: `nmap -sV <ipAddress>`
   - `Nikto` is open-source software that allows scanning websites for
     vulnerabilities; and, it enables looking for subdomains, outdated
     servers, debug messages etc., on a website: `nikto -host
